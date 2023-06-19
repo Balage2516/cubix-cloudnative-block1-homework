@@ -21,7 +21,7 @@
 									"\r",
 									"pm.test(\"Message is default\", function () {\r",
 									"    var jsonData = pm.response.json();\r",
-									"    pm.expect(jsonData.message).to.eql(\"default\");\r",
+									"    pm.expect(jsonData.message).to.eql(\"This is a default message\");\r",
 									"});"
 								],
 								"type": "text/javascript"
