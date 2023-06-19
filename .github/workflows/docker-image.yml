@@ -1,0 +1,21 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+          docker login ghcr.io -u Balage2516 -p ${{ github.token }}
+          docker build . -t ghcr.io/Balage2516/cubix/1/homework/app:springboot
+          docker push ghcr.io/Balage2516/cubix/1/homework/app:springboot
